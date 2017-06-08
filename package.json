@@ -1,0 +1,24 @@
+{
+  "name": "hyper-background-image",
+  "version": "1.0.0",
+  "description": "Set random images from a folder as hyperterm background",
+  "keywords": [
+    "hyper.app",
+    "hyper",
+    "hyperterm",
+    "transparent",
+    "background",
+    "random",
+    "folder"
+  ],
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "NaxYo",
+  "license": "MIT",
+  "repository": "NaxYo/hyper-background-image.git",
+  "dependencies": {
+    "parse-color": "^1.0.0"
+  }
+}
