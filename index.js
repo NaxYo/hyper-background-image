@@ -10,11 +10,17 @@ function getCSS(config) {
     config.backgroundImage.colorOpacity
   );
 
+  var position = config.backgroundImage.position ? config.backgroundImage.position : "center";
+  var size = config.backgroundImage.size ? config.backgroundImage.size : "contain";
+  var repeat = config.backgroundImage.repeat ? config.backgroundImage.repeat : "no-repeat";
+  
   return `
     ${config.css || ''}
     .terms_terms {
-      background: url(file://${file}) center;
-      background-size: cover;
+      background-image: url("file://${file}");
+      background-position: ${position};
+      background-size: ${size};
+      background-repeat: ${repeat};
     }
     .terms_termGroup {
       background: ${color} !important
