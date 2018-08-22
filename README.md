@@ -17,7 +17,10 @@ module.exports = {
 
     backgroundImage: {
       folder: '/Users/ignaciog.diaz/Pictures/bg',
-      colorOpacity: .6
+      colorOpacity: .6,
+      position: "center", // background-position default : center
+      size: "contain",  // background-size default : contain
+      repeat: "no-repeat",  // background-repeat default : no-repeat
     }
 
     ...

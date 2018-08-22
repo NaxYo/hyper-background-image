@@ -1,6 +1,9 @@
 const parse = require('parse-color');
 const DEFAULT_COLOR = 'rgba(0, 0, 0, .6)';
 const DEFAULT_OPACITY = .6;
+const DEFAULT_POSITION = "center";
+const DEFAULT_SIZE = "contain";
+const DEFAULT_REPEAT = "no-repeat";
 
 function getCSS(config) {
   var file = getRandomFile(config.backgroundImage.folder);
@@ -10,11 +13,17 @@ function getCSS(config) {
     config.backgroundImage.colorOpacity
   );
 
+  var position = config.backgroundImage.position || DEFAULT_POSITION;
+  var size = config.backgroundImage.size || DEFAULT_SIZE;
+  var repeat = config.backgroundImage.repeat || DEFAULT_REPEAT;
+  
   return `
     ${config.css || ''}
     .terms_terms {
-      background: url(file://${file}) center;
-      background-size: cover;
+      background-image: url("file://${file}");
+      background-position: ${position};
+      background-size: ${size};
+      background-repeat: ${repeat};
     }
     .terms_termGroup {
       background: ${color} !important
